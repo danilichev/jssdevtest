@@ -1,0 +1,19 @@
+<template name="header">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 lim">
+      <h3>JSSolutions Test</h3>
+    </div>
+    {{#if currentUser}}
+      <div class="col-xs-12 col-sm-6 text-right lim">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" 
+              type="button" data-toggle="dropdown">{{currentUser.profile.name}}
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a id="logOutButton" href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</template>
