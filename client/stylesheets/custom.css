@@ -1,15 +1,42 @@
-.dropdown .btn {
-    border: 0px solid transparent;
+header {
+    margin-bottom: 2rem;
 }
 
 .map-container {
     width: 100%;
     max-width: 100%;
     height: 512px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
+.btn-social {
+    margin-top: 2rem;
+}
 
+.dropdown .btn {
+    border: 0px solid transparent;
+}
 
-.lim {
-    border: 1px dashed black;   
+.requests-list .btn {
+    width: 80%;
+    height: 100%;
+    margin-right: 20%;
+    border: 0px solid transparent;
+}
+
+.requests-list tbody tr td {
+    padding: 0;
+    vertical-align: middle;
+}
+
+.venues-number {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+
+}
+
+.fa-github {
+  font-size: 2.4rem;
+  color: #333;
 }

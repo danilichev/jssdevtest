@@ -1,0 +1,14 @@
+<template name="requestItem">
+  <tr class="requestItem">
+    <td>
+      <button type="button" class="btn btn-default" id="removeRequestButton">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      </button>
+    </td>
+    <td>{{parameters.query}}</td>
+    <td>{{parameters.lat}}</td>
+    <td>{{parameters.lng}}</td>
+    <td>{{parameters.radius}}</td>
+    <td class="text-center">{{getFormattedDate date}}</td>
+  </tr>
+</template>

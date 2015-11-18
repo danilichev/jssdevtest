@@ -7,8 +7,10 @@ Meteor.methods({
         var requestParameters = {
             client_id: Meteor.settings.foursquare.clientId,
             client_secret: Meteor.settings.foursquare.secret,
-            ll: '35.689, 139.692',
+            ll: parameters.lat + ', ' + parameters.lng,
             query: parameters.query,
+            radius: parameters.radius,
+            limit: 20,
             v: '20140806',
             m: 'foursquare'   
         };
@@ -27,5 +29,5 @@ Meteor.methods({
         } catch (error) {
             throw new Meteor.Error("No Result", "Failed to fetch...");   
         }
-    }   
+    }  
 });

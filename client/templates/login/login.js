@@ -1,5 +1,5 @@
 Template.login.events({
-    'click button': function() {
+    'click .btn-google': function() {
         Meteor.loginWithGoogle();
     } 
 });

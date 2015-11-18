@@ -1,6 +1,11 @@
 <template name="layout">
   <div class="container">
-    {{> header}}
+    <header>{{> header}}</header>
     {{> yield}}
   </div>
+  <footer class="footer">
+    <div class="container">
+      <a href="https://github.com/kolupator/jssdevtest"><i class="fa fa-github"></i></a>
+    </div>
+  </footer>
 </template>

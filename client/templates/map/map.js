@@ -1,5 +1,5 @@
 Template.map.onRendered(function() {
-    GoogleMaps.load();
+    GoogleMaps.load({libraries: 'geometry'});
 });
 
 Template.map.helpers({  

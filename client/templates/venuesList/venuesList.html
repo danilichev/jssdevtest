@@ -1,0 +1,30 @@
+<template name="venuesList">
+  <div class="col-sm-6 venues-number">
+    {{venuesNumber}}
+  </div>
+  <div class="col-sm-6 text-right">
+    <button class="btn btn-default" id="exportButton" type="submit">Export to CSV</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Street Address</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each venues}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{location.city}}</td>
+          <td>{{location.address}}</td>
+          <td>{{location.lat}}</td>
+          <td>{{location.lng}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

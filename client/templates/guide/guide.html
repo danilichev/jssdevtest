@@ -1,11 +1,25 @@
 <template name="guide">
-  <div class="input-group">
-    <input id="searchInput" type="textbox" placeholder="Search" class="form-control">
-    <span class="input-group-btn btn-default">
-      <button class="btn btn-default" id="searchButton" type="button">
-        <i class="glyphicon glyphicon-search"></i>
-      </button>
-    </span>
-  </div>
+  {{#if Template.subscriptionsReady}}
+    {{> requestsList requests=getRequests}}
+  {{/if}}
+  {{#if isMapReady}}
+    <form id="searcForm">
+      <div class="input-group" id="search">
+        <input id="searchInput" type="textbox" placeholder="Search" class="form-control">
+        <span class="input-group-btn btn-default disabled">
+          <button class="btn btn-default disabled" id="searchButton" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </span>
+      </div>
+      <span class="text-danger">{{isSearchInputEmpty}}</span>
+    </form>
+  {{/if}}
   {{> map}}
+  {{#if isMapReady}}
+    {{#with getRequestParameters}}{{/with}}
+    {{#if getVenues}}
+      {{> venuesList venues=getVenues}}
+    {{/if}}
+  {{/if}}
 </template>

@@ -20,7 +20,9 @@ iron:router
 twbs:bootstrap
 accounts-google
 service-configuration
-msavin:mongol
 dburles:google-maps
 http
 check
+reactive-var
+fortawesome:fontawesome
+momentjs:moment
